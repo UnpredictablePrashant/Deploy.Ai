@@ -10,5 +10,5 @@ Questions:
 7. Architecture - 2 Tier, 3 Tier
 8. Code Source - Github, Code Commit
 9. Cloud Provider - AWS, GCP, Azure
-10. What is your Preferred CI/CD?
+10. What is your Preferred CI/CD? - Jenkins, CodePipeline, GitLab, Github Actions
 11. Number of Expected Concurrent Users or Usage Rate? 0-100 Users, 100 - 1000 Users, 1000 - 100,000 Users, 100,000 - 1,000,000 Users
