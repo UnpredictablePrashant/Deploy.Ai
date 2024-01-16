@@ -1,0 +1,9 @@
+{
+    "stack": "django",
+    "aws_acc": "yes",
+    "code/container": "dockerhub",
+    "type": "monolithic",
+    "Deployment": "ECS_Fargate",
+    "port": 3000
+}
+  
