@@ -1,4 +1,4 @@
-# This program is for integrating telegram with python.
+# This program is for integrating telegram with python. This is sample one.
 
 from typing import Final
 from telegram import Update
