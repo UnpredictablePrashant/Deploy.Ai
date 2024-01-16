@@ -1,0 +1,8 @@
+{
+    "stack": "html",
+    "aws_acc": "yes",
+    "code/container": "github",
+    "type": "monolithic",
+    "deployment": "eks",
+    "port": 5000
+  }

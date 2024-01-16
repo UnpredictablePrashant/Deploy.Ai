@@ -1,0 +1,8 @@
+{
+    "stack": "wordpress",
+    "aws_acc": "yes",
+    "code/container": "github",
+    "type": "monolithic",
+    "deployment": "lightsail",
+    "port": 0
+  }
