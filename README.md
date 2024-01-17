@@ -25,5 +25,6 @@ In part three we created the json_read.py file that looks for any json file from
 Once the infra is created by terraform, the ansible scripts are used to deploy and ensure the website works.
 
 ## Where is this Main Project Deployed?
+
 We are using two ec2 instances in two different availability zones. They are load balanced. Github actions is used to update the local repository. Nginx is set up with a domain name. We are also using cloudflare for this purpose. For SSL we are using certbot. 
 
