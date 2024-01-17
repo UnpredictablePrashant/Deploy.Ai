@@ -1,12 +1,12 @@
 # Deploy.Ai
 
-This project is divided into three parts, this is the main repository and there are three other repositories which are the subset of this repository.
+ This is an AI Deployment Planner. Users can converse with an AI Bot that is specially trained to provide you a personalized plan for your deployment needs. This project is divided into three parts, this is the main repository and there are three other repositories which are the subset of this repository. 
 
 1. Landing Page and Authentication
 2. Deployment Plan Created By AI
 3. Deployment Performed by Python Automation
 
-## part 1: Landing Page with Authentication, User Profiles and Chatbot features
+## Part 1: Landing Page with Authentication, User Profiles and Chatbot features
 For this purpose we are using plain html (index.html),css and javascript, along with Amazon Cognito for authentication. User will use email id and verification to start using the bot. For the Purpose of bot features/frontend we will be using Kommunicate or kore.ai. It will either be a standalone solution or be a frontend for lex or chatgpt. 
 
 
@@ -24,6 +24,6 @@ In part three we created the json_read.py file that looks for any json file from
 
 Once the infra is created by terraform, the ansible scripts are used to deploy and ensure the website works.
 
-## Where is this main project deployed?
+## Where is this Main Project Deployed?
 We are using two ec2 instances in two different availability zones. They are load balanced. Github actions is used to update the local repository. Nginx is set up with a domain name. We are also using cloudflare for this purpose. For SSL we are using certbot. 
 
