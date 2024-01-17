@@ -28,3 +28,15 @@ Once the infra is created by terraform, the ansible scripts are used to deploy a
 
 We are using two ec2 instances in two different availability zones. They are load balanced. Github actions is used to update the local repository. Nginx is set up with a domain name. We are also using cloudflare for this purpose. For SSL we are using certbot. 
 
+
+
+## Repository Structure:
+
+Files:
+
+* /json_read.py - main file that reads the contents of the json file and matches with existing deployment json's. Then runs the corresponding infrastructure scripts and other scripts necessary for deployment. 
+
+* /json_read_starter.py - 
+
+
+* /website/index.html - landing page for the website

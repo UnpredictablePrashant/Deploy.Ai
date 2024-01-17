@@ -26,6 +26,9 @@ for json_dumps_file in json_dumps_files:
                 break  # Stop searching if a match is found
 
 # Print the result (matched file) if found
+# currently the dumps json file is compared against the files in the json_library but with
+# version 2 we will have conditional statements that directly check the dumps file line by line.            
+
 if result is not None:
     print(f"Match found in json_library: {result}")
 else:
