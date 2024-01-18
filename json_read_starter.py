@@ -3,7 +3,8 @@
 # This method of executing the file will be done until a command is generated from the bot side to 
 # automate this step or upon building a jenkins pipeline.  
 
-# This script will be run using a cron job that runs every minute ( * * * * * ) 
+# Strategy 1: This script will be run using a cron job that runs every minute ( * * * * * ) 
+# Strategy 2: This script will be run by a Lambda trigger.
 
 import os
 

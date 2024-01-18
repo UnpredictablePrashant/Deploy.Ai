@@ -40,3 +40,10 @@ Files:
 
 
 * /website/index.html - landing page for the website
+
+Things To Do:
+
+0. S3 bucket instead of dumps folder
+1. Compare json against dynamoDB/documentDB instead of other jsons in the library.
+2. Create more Json files and store it in spare library of more use cases.
+3. 

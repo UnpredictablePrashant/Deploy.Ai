@@ -34,7 +34,7 @@ if result is not None:
 else:
     print("No match found in json_library.")
 
-if result == "101.json":
+if result == "102.json":
 # create a try and except block incase the terraform script does not exist
     os.system("cd terraform_scripts/101")
     os.system("terraform init")
@@ -47,3 +47,5 @@ if result == "101.json":
 # once this step is done, file.json will be automatically moved to json_processed
 os.system("cd ../../")
 os.system("mv json_dumps/file.json json_processed")
+
+# notify user that deployment is successful

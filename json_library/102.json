@@ -1,9 +1,9 @@
 {
-    "stack": "mern",
-    "aws_acc": "yes",
-    "code/container": "ecr",
-    "type": "monolithic",
-    "deployment": "eks",
-    "port": 5000
-  }
+  "stack": "mern",
+  "aws_acc": "yes",
+  "code/container": "ecr",
+  "type": "monolithic",
+  "deployment": "eks",
+  "port": 5000
+}
     
