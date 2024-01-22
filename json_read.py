@@ -43,7 +43,9 @@ if result == "102.json":
         os.system("terraform init")
         os.system("terraform apply -auto-approve")
         os.chdir("../../")
-        os.chdir("ansible_playbooks/101")
+        os.chdir("ansible_playbooks")
+        os.system("ansible-playbook -i 101.ini nginx.yaml")
+        
         # Execute the ansible playbook that completes the deployment process
         # and confirms that the website is running correctly (returns 200)
         
