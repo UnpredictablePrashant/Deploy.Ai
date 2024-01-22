@@ -1,0 +1,2 @@
+every time a deployment is performed, logs from terraform and ansible will be created.
+Also a custom log if the application is running or not is created.

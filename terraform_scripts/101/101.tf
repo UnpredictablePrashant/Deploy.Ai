@@ -1,4 +1,5 @@
-// code to create a ECS_Fargate service on existing VPC
+// code to create an EC2 on existing VPC
+// dont forget to create resources with a label.
 
 // container_link = ""
 

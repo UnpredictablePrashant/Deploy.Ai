@@ -46,4 +46,12 @@ Things To Do:
 0. S3 bucket instead of dumps folder
 1. Compare json against dynamoDB/documentDB instead of other jsons in the library.
 2. Create more Json files and store it in spare library of more use cases.
-3. 
+3. Make json_read file more classy with functions and classes.
+After the infra is created and the application is deployed, users get to see the evidence with either system manager or resource explorer. 
+
+Future Plans:
+0. Currently in the json_read.py file, we are creating infrastructure and config based on conditions written for each json deployment cases.
+But later we would like to create an AI model that will be used to automatically figure out the corresponding codes to run by reading the terraform scripts.
+Or even better, we would build the AI model by training it on various tf scripts that it will automatically create the terraform scripts. 
+
+
