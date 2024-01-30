@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Deploy.ai</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="your-custom-styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar (You can reuse your existing navbar here) -->
+    <!-- ... -->
+
+    <!-- Register Section -->
+    <section class="container my-5">
+      <h1 class="text-center mb-4">Register</h1>
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          <form action="your-registration-endpoint" method="post">
+            <!-- Name Input -->
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                required
+              />
+            </div>
+
+            <!-- Email Input -->
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+
+            <!-- Password Input -->
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                required
+              />
+            </div>
+
+            <!-- Confirm Password Input -->
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="confirmPassword"
+                name="confirmPassword"
+                required
+              />
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (You can reuse your existing footer here) -->
+    <!-- ... -->
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

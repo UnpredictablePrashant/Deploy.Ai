@@ -1,33 +1,181 @@
-<!-- This will be our simple landing page -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Deep Deploy</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deploy.ai - Mastering Software Deployment</title>
+    <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="your-custom-styles.css" />
   </head>
   <body>
-    <br>
-    <br>
-    <h1 class="text-center display-4">Welcome To Deep Deploy</h1>
-    <br />
-    <br />
-    <form class="text-center mb-3">
-      <label class="text-center display-6 form-label" for="email">Enter Your Email : </label><br><br>
-      <input type="text" id="fname" name="email" placeholder="  name@example.com" value=""><br>
-      <br>
-      <input class="btn btn-outline-secondary" type="submit" value=" Unleash Deep Deploy ">
-    </form> 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Deploy.ai</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">How It Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contribute</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center">
+        <h1 class="display-4">Deploy.ai</h1>
+        <p class="lead">
+          Revolutionize Your Software Deployment with AI-driven Strategies and
+          Automation.
+        </p>
+        <a class="btn btn-primary btn-lg" href="#" role="button"
+          >Explore Features</a
+        >
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Key Features</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Personalized Plans</h3>
+          <p>
+            Create personalized deployment and release plans tailored to your
+            unique project needs.
+          </p>
+          <h3>Team Collaboration</h3>
+          <p>
+            Enhance productivity by collaborating seamlessly with your team
+            within the platform.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h3>Instant Pricing</h3>
+          <p>
+            Get instant, transparent pricing for your deployments to manage and
+            optimize your budget.
+          </p>
+          <h3>One-Click Deployments</h3>
+          <p>
+            Execute complex deployments flawlessly with a single click, saving
+            time and reducing errors.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h3>Automatic Architecture</h3>
+          <p>
+            Build automatic deployment architectures that are optimized for
+            efficiency and scalability.
+          </p>
+          <h3>Customization</h3>
+          <p>
+            Easily customize your deployment strategies on both micro and macro
+            levels.
+          </p>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <h3>Expert Recommendations</h3>
+          <p>
+            Receive expert recommendations to make informed decisions and
+            improve your deployment process.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h3>Specialized Alerts</h3>
+          <p>
+            Stay informed with specialized alerts that keep you updated on your
+            deployment's progress and issues.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h3>Automatic Deployments</h3>
+          <p>
+            Set your deployments to run automatically at predetermined times or
+            conditions for increased efficiency.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="container-fluid bg-light text-center py-5">
+      <h2>Trusted by Industry Leaders</h2>
+      <div class="container">
+        <!-- Add testimonials here -->
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="container-fluid text-center py-5">
+      <h2>Optimize Your Deployment Today</h2>
+      <p>
+        Join a growing number of professionals who are enhancing their
+        deployment process with Deploy.ai.
+      </p>
+      <a class="btn btn-success btn-lg" href="#" role="button"
+        >Start Your Free Trial</a
+      >
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <!-- Add social media links here -->
+      </section>
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2024 Deploy.ai. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
