@@ -11,16 +11,60 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="your-custom-styles.css" />
+    <style>
+      .card {
+        margin-bottom: 20px;
+      }
+      .card-body p {
+        font-size: 1.2rem; /* Adjust the font size if necessary */
+      }
+    </style>
   </head>
   <body>
-    <!-- Navigation Bar (You can reuse your existing navbar here) -->
-    <!-- ... -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">Deploy.ai</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/howitworks">How It Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contribute">Contribute</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/register">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- About Us Section -->
     <section class="container my-5">
       <h1 class="text-center mb-4">About Us</h1>
-      <div class="row">
-        <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
           <p>
             At Deploy.ai, we're more than just a team – we're a close-knit
             family of tech enthusiasts driven by a shared passion for innovation
@@ -65,11 +109,47 @@
             our platform is poised to redefine the way you approach software
             deployment. Join us, and together, let's deploy the future.
           </p>
-        </div>
+          <br>
+
+          <div class="col-lg-12 mb-4">
+            <div class="authors">
+              <!-- Ram -->
+              <div class="author">
+                <a href="www.linkedin.com.in/ram-kumar-r/" target="_blank">
+                  <img src="/frontend/templates/profilepics/elon.jpeg" alt="Ram" class="author-image">
+                  <p>Ram</p>
+                </a>
+              </div>
+  
+              <!-- Swapna -->
+              <div class="author">
+                <a href="https://www.linkedin.com/in/swapnashreetripathy/" target="_blank">
+                  <img src="/frontend/templates/profilepics/beyonce.webp" alt="Swapna" class="author-image">
+                  <p>Swapna</p>
+                </a>
+              </div>
+  
+              <!-- Sai -->
+              <div class="author">
+                <a href="https://www.linkedin.com/in/saikiranthatikonda/" target="_blank">
+                  <img src="/frontend/templates/profilepics/thor.webp" alt="Sai" class="author-image">
+                  <p>Sai</p>
+                </a>
+              </div>
+  
+              <!-- Himani -->
+              <div class="author">
+                <a href="https://www.linkedin.com/in/prashantkumardey/" target="_blank">
+                  <img src="/frontend/templates/profilepics/mulan.jpeg" alt="Himani" class="author-image">
+                  <p>Himani</p>
+                </a>
+              </div>
+            </div>
+          </div>
       </div>
     </section>
 
-    <!-- Footer (You can reuse your existing footer here) -->
+    <!-- Footer -->
     <!-- ... -->
 
     <!-- Bootstrap JS, Popper.js, and jQuery -->
@@ -78,3 +158,27 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
+<style>
+  .authors {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .author {
+    text-align: center;
+    margin: 10px;
+  }
+
+  .author img {
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the image round */
+    margin-bottom: 5px;
+  }
+
+  .author p {
+    margin: 0;
+  }
+</style>
