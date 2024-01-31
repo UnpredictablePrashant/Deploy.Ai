@@ -26,7 +26,11 @@ Once the infra is created by terraform, the ansible scripts are used to deploy a
 
 ## Where is this Main Project Deployed?
 
-We are using two ec2 instances in two different availability zones. They are load balanced. Github actions is used to update the local repository. Nginx is set up with a domain name. We are also using cloudflare for this purpose. For SSL we are using certbot. 
+We are using an ec2 instance with an elastic IP attached to it. Github actions is used to update the local repository. Nginx is set up with a domain name. We are also using cloudflare for this purpose. For SSL we are using certbot. 
+
+### Are you well architected?
+
+We are using the AWS's Well Architected Framework to create this project which ensures operational excellence, performance efficency, reliability, sustainability, security and cost optimization. 
 
 
 
