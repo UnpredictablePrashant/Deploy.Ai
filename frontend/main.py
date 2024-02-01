@@ -2,6 +2,7 @@
 # the routing of the html pages depending upon the requests
 
 from flask import Flask, render_template
+from flask import redirect
 
 app = Flask(__name__)
 
@@ -31,7 +32,8 @@ def register():
 
 @app.route('/login')
 def login():
-    return render_template('login.html')
+    cognito_url = "https://ai-deploy.auth.ap-southeast-1.amazoncognito.com/oauth2/authorize?response_type=code&client_id=7778obvq454q15r0s3ll32l9f7&redirect_uri=https://localhost"
+    return redirect(cognito_url)
 
 @app.route('/loginsuccess/docs')
 def docs():
