@@ -1,6 +1,6 @@
 from os import environ, urandom
 from dotenv import load_dotenv
-from flask import Flask, render_template, redirect, session, url_for
+from flask import Flask, render_template, redirect, session, url_for, jsonify
 from flask_cognito_lib import CognitoAuth
 from flask_cognito_lib.decorators import (
     auth_required,
@@ -12,21 +12,22 @@ from flask_cognito_lib.exceptions import (
     AuthorisationRequiredError,
     CognitoGroupRequiredError,
 )
+import os
 
-basedir = path.abspath(path.dirname(__file__))
-load_dotenv(path.join(basedir, ".env"))
+basedir = os.path.abspath(os.path.dirname(__file__))
+load_dotenv(os.path.join(basedir, ".env"))
 
 app = Flask(__name__)
 
 # Configuration: Replace these with your actual settings
 app.config['SECRET_KEY'] = environ.get("SECRET_KEY", urandom(32))
-app.config['COGNITO_REGION'] = 'ap-southeast-1'
-app.config['COGNITO_USERPOOL_ID'] = 'ap-southeast-1_2WfO8UmdC'
-app.config['COGNITO_CLIENT_ID'] = '7778obvq454q15r0s3ll32l9f7'
-app.config['COGNITO_DOMAIN'] = 'https://ai-deploy.auth.ap-southeast-1.amazoncognito.com' 
-app.config['COGNITO_REDIRECT_URI'] = 'https://dynalink.in/loginsuccess'
-app.config['COGNITO_LOGOUT_URL'] = 'https://dynalink.in/'  # You need to add this
-app.config['COGNITO_COOKIE_AGE_SECONDS'] = '300'  # You need to add this
+app.config['COGNITO_REGION'] = environ.get('AWS_REGION', 'ap-southeast-1')
+app.config['COGNITO_USERPOOL_ID'] = environ.get('AWS_COGNITO_USER_POOL_ID', 'ap-southeast-1_2WfO8UmdC')
+app.config['COGNITO_CLIENT_ID'] = environ.get('AWS_COGNITO_USER_POOL_CLIENT_ID', '7778obvq454q15r0s3ll32l9f7')
+app.config['COGNITO_DOMAIN'] = environ.get('AWS_COGNITO_DOMAIN', 'https://ai-deploy.auth.ap-southeast-1.amazoncognito.com')
+app.config['AWS_COGNITO_REDIRECT_URL'] = environ.get('AWS_COGNITO_REDIRECT_URL', 'https://dynalink.in/loginsuccess')
+app.config['COGNITO_LOGOUT_URL'] = environ.get('AWS_COGNITO_LOGOUT_URL', 'https://dynalink.in/')
+app.config['COGNITO_COOKIE_AGE_SECONDS'] = environ.get('AWS_COGNITO_COOKIE_AGE_SECONDS', '300')
 
 cognito_auth = CognitoAuth(app)
 
@@ -51,10 +52,13 @@ def auth_callback():
 @app.route('/loginsuccess')
 @auth_required()
 def login_success():
-    return jsonify(session)
+    # If you want to show user info, you can use session['claims'] or session['user_info']
+    # For now, just showing a simple message
+    return render_template('loginsuccess.html', user_info=session.get('claims', {}))
 
 @app.errorhandler(AuthorisationRequiredError)
 def auth_error_handler(err):
+    # Redirect to login if user is not authorized
     return redirect(url_for("login"))
 
 @app.route('/logout')
@@ -65,6 +69,7 @@ def logout():
 
 @app.route('/postlogout')
 def postlogout():
+    # Redirect to index after logout
     return redirect(url_for("index"))
 
 # ... other routes ...
