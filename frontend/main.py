@@ -2,7 +2,8 @@
 # the routing of the html pages depending upon the requests
 
 from flask import Flask, render_template, redirect, url_for
-from flask_cognito_lib import CognitoAuth, cognito_auth_required
+from flask_cognito_lib import *
+# from flask_cognito_lib import CognitoAuth, cognito_auth_required
 
 app = Flask(__name__)
 
@@ -13,6 +14,8 @@ app.config['COGNITO_CLIENT_ID'] = '7778obvq454q15r0s3ll32l9f7'
 # app.config['COGNITO_CLIENT_SECRET'] = 'YOUR_CLIENT_SECRET'
 app.config['COGNITO_DOMAIN'] = 'https://ai-deploy.auth.ap-southeast-1.amazoncognito.com' # e.g., 'your-domain.auth.ap-southeast-1.amazoncognito.com'
 app.config['COGNITO_REDIRECT_URI'] = 'https://dynalink.in/loginsuccess' # e.g., 'https://your-app.com/auth/callback'
+
+cognito_auth = CognitoAuth(app)
 
 @app.route('/')
 def index():
