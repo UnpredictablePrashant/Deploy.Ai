@@ -32,7 +32,7 @@ def register():
 
 @app.route('/login')
 def login():
-    cognito_url = "https://ai-deploy.auth.ap-southeast-1.amazoncognito.com/oauth2/authorize?response_type=code&client_id=7778obvq454q15r0s3ll32l9f7&redirect_uri=https://localhost"
+    cognito_url = "https://ai-deploy.auth.ap-southeast-1.amazoncognito.com/oauth2/authorize?response_type=code&client_id=7778obvq454q15r0s3ll32l9f7&redirect_uri=https://dynalink.in/loginsuccess"
     return redirect(cognito_url)
 
 @app.route('/loginsuccess/docs')
