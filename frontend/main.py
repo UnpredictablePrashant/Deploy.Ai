@@ -7,7 +7,7 @@ from flask_cognito_lib import CognitoAuth, cognito_auth_required
 app = Flask(__name__)
 
 # Configuration: Replace these with your actual settings
-app.config['COGNITO_REGION'] = 'ap-south-1'
+app.config['COGNITO_REGION'] = 'ap-southeast-1'
 app.config['COGNITO_USERPOOL_ID'] = 'ap-southeast-1_2WfO8UmdC'
 app.config['COGNITO_CLIENT_ID'] = '7778obvq454q15r0s3ll32l9f7'
 # app.config['COGNITO_CLIENT_SECRET'] = 'YOUR_CLIENT_SECRET'
