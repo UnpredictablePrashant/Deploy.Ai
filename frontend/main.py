@@ -47,6 +47,17 @@ def tutorials():
 def needhelp():
     return render_template('needhelp.html')
 
+@app.route('/logout')
+def logout():
+    # Perform any necessary cleanup, like invalidating your app's session
+    
+    # Redirect to Cognito's logout endpoint
+    cognito_logout_url = (
+        "https://ai-deploy.auth.ap-southeast-1.amazoncognito.com/logout?"
+        "client_id=7778obvq454q15r0s3ll32l9f7&"  # Your Cognito App Client ID
+        "logout_uri=https://dynalink.in/"  # Your sign-out URL
+    )
+    return redirect(cognito_logout_url)
 
 if __name__ == '__main__':
     app.run(debug=True)
