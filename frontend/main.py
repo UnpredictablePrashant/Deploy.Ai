@@ -2,7 +2,7 @@
 # the routing of the html pages depending upon the requests
 
 from flask import Flask, render_template
-from flask import redirect, session
+from flask import redirect, session, jsonify, request
 
 app = Flask(__name__)
 app.secret_key = 'a_random_secret_key'
@@ -52,6 +52,33 @@ def tutorials():
 @app.route('/loginsuccess/needhelp')
 def needhelp():
     return render_template('needhelp.html')
+
+################################################################
+################################ chatbot functionality################################
+
+def get_chatbot_response(user_id, message):
+    # Here, integrate with your actual chatbot service
+    # For demonstration, we'll just echo the message
+    return f"Echo: {message}"
+
+@app.route('/send_message', methods=['POST'])
+def handle_message():
+    user_id = session.get('user_id')
+    if not user_id:
+        # Handle the case where there's no user session
+        return jsonify({'error': 'User not logged in or session expired'}), 403
+
+    message = request.json.get('message')
+    if not message:
+        return jsonify({'error': 'No message provided'}), 400
+
+    response_message = get_chatbot_response(user_id, message)
+    return jsonify({'message': response_message})
+
+
+################################ end of chatbot #################################
+######################################################################################
+
 
 @app.route('/logout')
 def logout():
