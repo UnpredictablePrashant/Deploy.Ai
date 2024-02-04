@@ -2,9 +2,11 @@
 # the routing of the html pages depending upon the requests
 
 from flask import Flask, render_template
-from flask import redirect
+from flask import redirect, session
 
 app = Flask(__name__)
+app.secret_key = 'a_random_secret_key'
+
 
 @app.route('/')
 def index():
@@ -24,6 +26,10 @@ def how_it_works():
 
 @app.route('/loginsuccess')
 def login_success():
+    # Set user-specific session data
+    session['user_id'] = 'the_id_of_the_user'
+    session['user_name'] = 'the_name_of_the_user'
+    # You can set other user-specific details as well
     return render_template('loginsuccess.html')
 
 @app.route('/register')
@@ -50,7 +56,7 @@ def needhelp():
 @app.route('/logout')
 def logout():
     # Perform any necessary cleanup, like invalidating your app's session
-    
+    session.clear()
     # Redirect to Cognito's logout endpoint
     cognito_logout_url = (
         "https://ai-deploy.auth.ap-southeast-1.amazoncognito.com/logout?"
