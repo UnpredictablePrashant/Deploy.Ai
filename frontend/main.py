@@ -29,14 +29,14 @@ def login():
     cognito_url = "https://ai-deploy.auth.ap-southeast-1.amazoncognito.com/oauth2/authorize?response_type=code&client_id=7778obvq454q15r0s3ll32l9f7&redirect_uri=https://dynalink.in/loginsuccess"
     return redirect(cognito_url)
 
-def login_required(f):
-    @wraps(f)
-    def decorated_function(*args, **kwargs):
-        if 'user_id' not in session:
-            # If there's no 'user_id' in session, redirect to login
-            return redirect(url_for('login'))
-        return f(*args, **kwargs)
-    return decorated_function
+# def login_required(f):
+#     @wraps(f)
+#     def decorated_function(*args, **kwargs):
+#         if 'user_id' not in session:
+#             # If there's no 'user_id' in session, redirect to login
+#             return redirect(url_for('login'))
+#         return f(*args, **kwargs)
+#     return decorated_function
 
 @app.route('/loginsuccess')
 def login_success():
@@ -53,17 +53,17 @@ def register():
     return redirect(cognito_url)
 
 @app.route('/loginsuccess/docs')
-@login_required
+# @login_required
 def docs():
     return render_template('docs.html')
 
 @app.route('/loginsuccess/tutorials')
-@login_required
+# @login_required
 def tutorials():
     return render_template('tutorials.html')
 
 @app.route('/loginsuccess/needhelp')
-@login_required
+# @login_required
 def needhelp():
     return render_template('needhelp.html')
 
