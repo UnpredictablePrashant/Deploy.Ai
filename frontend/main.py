@@ -24,6 +24,11 @@ def contribute():
 def how_it_works():
     return render_template('howitworks.html')
 
+@app.route('/login')
+def login():
+    cognito_url = "https://ai-deploy.auth.ap-southeast-1.amazoncognito.com/oauth2/authorize?response_type=code&client_id=7778obvq454q15r0s3ll32l9f7&redirect_uri=https://dynalink.in/loginsuccess"
+    return redirect(cognito_url)
+
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
@@ -34,7 +39,6 @@ def login_required(f):
     return decorated_function
 
 @app.route('/loginsuccess')
-@login_required
 def login_success():
     # Set user-specific session data
     session['user_id'] = 'the_id_of_the_user'
@@ -42,10 +46,6 @@ def login_success():
     # You can set other user-specific details as well
     return render_template('loginsuccess.html')
 
-@app.route('/login')
-def login():
-    cognito_url = "https://ai-deploy.auth.ap-southeast-1.amazoncognito.com/oauth2/authorize?response_type=code&client_id=7778obvq454q15r0s3ll32l9f7&redirect_uri=https://dynalink.in/loginsuccess"
-    return redirect(cognito_url)
 
 @app.route('/register')
 def register():
