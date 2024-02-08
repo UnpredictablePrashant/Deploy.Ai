@@ -1,1 +1,20 @@
-# This will have scripts nginx config
+---
+- name: Install Nginx on EC2
+  hosts: web_servers
+  become: true
+
+  tasks:
+    - name: Update package cache
+      package_facts:
+        manager_update_cache: yes
+
+    - name: Install Nginx
+      package:
+        name: nginx
+        state: present
+
+    - name: Start Nginx service
+      service:
+        name: nginx
+        state: started
+        enabled: yes
