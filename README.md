@@ -54,8 +54,26 @@ Things To Do:
 After the infra is created and the application is deployed, users get to see the evidence with either system manager or resource explorer. 
 
 Future Plans:
-0. Currently in the json_read.py file, we are creating infrastructure and config based on conditions written for each json deployment cases.
-But later we would like to create an AI model that will be used to automatically figure out the corresponding codes to run by reading the terraform scripts.
-Or even better, we would build the AI model by training it on various tf scripts that it will automatically create the terraform scripts. 
+Currently in the json_read.py file, we are creating infrastructure and config based on conditions written for each json deployment case.
+
+But later, we would like to create an AI model that will be used to automatically figure out the corresponding codes to run by reading the Terraform scripts.
+
+Or even better, we would build the AI model by training it on various TF scripts so that it would automatically create the Terraform scripts.
+
+With the input provided by the user, this AI model will detect the type of deployment.
+
+1. By analyzing the JSON file, this AI model would be able to identify patterns and dependencies within the infrastructure and configuration requirements. This would eliminate the need for manual coding and reduce human errors, resulting in a more efficient and accurate deployment process. Additionally, the AI model could continuously learn and adapt to new deployment scenarios, enhancing its capabilities over time. 
+
+2. The AI model would then translate these natural language inputs into the appropriate Terraform scripts, further simplifying the deployment process for users. deployment case in the json_read.py file.
+
+3. Discussing the future vision: Explain how there is a plan to develop an AI model that can automatically determine the corresponding codes to run by reading Terraform scripts, which would eliminate the need for manual intervention.
+
+4. Highlighting improved efficiency: Elaborate on how building an AI model by training it on various TF scripts would lead to greater automation and efficiency in creating Terraform scripts, as it would be able to generate them automatically.
+
+5. Describing user interaction: Write about how this proposed AI model could incorporate user input to detect different types of deployments accurately, making it more versatile and adaptable for various scenarios.
+
+6. Addressing potential benefits: Explore the potential advantages of implementing such an AI-driven system, including reduced human error, a faster script generation process, scalability, and better resource allocation based on specific deployment requirements.
+
+
 
 
