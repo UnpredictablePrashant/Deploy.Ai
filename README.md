@@ -42,7 +42,8 @@
 ![Flowchart-deploy ai](https://github.com/UnpredictablePrashant/Deploy.Ai/assets/139486876/e32f9163-f9fa-4503-a699-8715745d122a)
 
 ## Architecture
-![Architecture-deploy ai](https://github.com/UnpredictablePrashant/Deploy.Ai/assets/139486876/adcb46cc-c501-45d3-8d24-2abc95a83947)
+![Architecture-Setupsage ai](https://github.com/UnpredictablePrashant/Deploy.Ai/assets/139486876/abd504df-2e4f-4314-b065-113fc499475a)
+
 
 ## Where is this Main Project Deployed?
 
