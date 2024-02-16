@@ -1,4 +1,4 @@
-# Setupsage.ai
+# Stepupsage.ai
 
  Introducing Stepupsage.ai - Your AI-driven Cloud Deployment Companion! Leveraging the power of AI, Deploy.ai transforms the way you estimate costs, plan, and migrate applications to the AWS Cloud. 
  This project is divided into three parts, this is the main repository and there are three other repositories which are the subset of this repository. 
