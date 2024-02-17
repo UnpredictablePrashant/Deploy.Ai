@@ -2,12 +2,7 @@
 - name: Install Nginx on EC2
   hosts: web_servers
   become: true
-
   tasks:
-    - name: Update package cache
-      package_facts:
-        manager_update_cache: yes
-
     - name: Install Nginx
       package:
         name: nginx
@@ -17,4 +12,3 @@
       service:
         name: nginx
         state: started
-        enabled: yes
