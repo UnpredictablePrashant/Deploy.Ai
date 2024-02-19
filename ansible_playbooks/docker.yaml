@@ -1,19 +1,14 @@
 ---
 - name: Install Docker on AWS instances
-  hosts: your_target_group
+  hosts: web_servers
   become: yes
 
   tasks:
-    - name: Install required packages
-      package:
-        name: "{{ item }}"
-        state: present
-      with_items:
-        - docker
-        - python3-pip  # Required for Ansible's docker module
+    - name: update server
+      shell: |
+            apt-get update -y
+            apt-get upgrade -y
 
-    - name: Ensure Docker service is running
-      service:
-        name: docker
-        state: started
-        enabled: yes
+    - name: Install required packages
+      shell:
+            apt install docker.io -y 
